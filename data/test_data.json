@@ -1,0 +1,21 @@
+{
+  "base_url": "https://demowebshop.tricentis.com",
+  "user": {
+    "login_email": "yafitm8098@gmail.com",
+    "login_password": "yafitM8098!"
+  },
+  "test_cases": [
+    {
+      "search_query": "book",
+      "max_price": 50,
+      "limit": 5,
+      "budget_per_item": 50
+    },
+    {
+      "search_query": "computer",
+      "max_price": 1000,
+      "limit": 5,
+      "budget_per_item": 5000
+    }
+  ]
+}
