@@ -1,0 +1,7 @@
+pytest
+pytest-xdist
+allure-pytest
+playwright
+pytest-playwright
+pytest-html
+pytest-base-url

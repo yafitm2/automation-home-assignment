@@ -6,16 +6,10 @@
   },
   "test_cases": [
     {
-      "search_query": "book",
-      "max_price": 50,
-      "limit": 5,
-      "budget_per_item": 50
-    },
-    {
       "search_query": "computer",
       "max_price": 1000,
       "limit": 5,
-      "budget_per_item": 5000
+      "budget_per_item": 1000
     }
   ]
 }

@@ -18,6 +18,7 @@ class LoginPage(BasePage):
         self.open_login_page()
         self.smart_fill(self.EMAIL_INPUT, email)
         self.smart_fill(self.PASSWORD_INPUT, password)
+        self.page.wait_for_timeout(2000)
         self.smart_click(self.LOGIN_BUTTON)
         self.page.wait_for_load_state("domcontentloaded")
         self.wait_for_login_result()

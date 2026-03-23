@@ -13,9 +13,12 @@ class BasePage:
         self.logger = get_logger(self.__class__.__name__)
 
     def _take_screenshot(self, prefix: str = "failure") -> str:
-        os.makedirs("screenshots", exist_ok=True)
+        screenshots_dir = os.environ.get("SCREENSHOTS_DIR", "screenshots")
+        os.makedirs(screenshots_dir, exist_ok=True)
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S_%f")
-        path = os.path.join("screenshots", f"{prefix}_{timestamp}.png")
+        path = os.path.join(screenshots_dir, f"{prefix}_{timestamp}.png")
+
         self.page.screenshot(path=path, full_page=True)
         self.logger.info(f"Screenshot saved: {path}")
         return path
